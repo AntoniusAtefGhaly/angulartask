@@ -1,0 +1,23 @@
+<h2>Users</h2>
+<table class="table table-stripped text-center alert alert-dark">
+  <thead>
+    <th rowspan="2">Id</th>
+    <th rowspan="2">Name</th>
+    <th rowspan="2">email</th>
+    <th colspan="2">photo url 
+    </th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of users">
+        <a routerLink="{{s.id}}">
+        <td>{{s.user_id}}</td></a>
+        <td>{{s.name}}</td>
+        <td> {{s.email}} </td>
+        <td>{{s.photoUrl}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<a routerLink="../adduser">
+  <input type="button" class="btn btn-success" value="ADD new user"> 
+</a>
